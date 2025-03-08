@@ -14,7 +14,7 @@ There are several ways to do this but I prefer the builds and instructions avail
 
 ## Configure go2rtc
 
-Create the following two files. I have this configured for a Raspberry Pi Camera and a USB camera. You'll probably want to delete the `picam_h264` line. Replace the path after `video=` with the path to your camera, which you should have from configuring Crowsnest.
+Create the following two files. I have this configured for a Raspberry Pi Camera and a USB camera. You'll probably want to delete the `picam_h264` line unless you're using a Raspberry Pi Camera. Replace the path after `video=` with the path to your camera, which you should have from configuring Crowsnest.
 
 File: `/home/pi/printer_data/config/go2rtc.yaml`  
 
@@ -85,7 +85,7 @@ Once everything is working, you can enable the systemd service so that it starts
 
 ## Configure Mainsail and Fluidd
 
-Make sure you select `WebRTC (go2rtc)` as the service and use the following URL for the stream, replacing the ALL_CAPS text with your values:
+Make sure you select `WebRTC (go2rtc)` as the service and use the following URL for the stream, replacing the ALL_CAPS text with your IP address or URL:
 
     http://YOUR_IP_ADDRESS:1984/stream.html?src=linux_usbcam&mode=webrtc
 
