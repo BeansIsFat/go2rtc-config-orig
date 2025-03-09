@@ -113,3 +113,5 @@ This is URL for snapshots:
 {% highlight shell %}
 http://YOUR_IP_ADDRESS:1984/api/frame.jpeg?src=linux_usbcam
 {% endhighlight %}
+
+***
