@@ -1,5 +1,7 @@
-# Video streaming using go2rtc on a Raspberry Pi
-
+---
+layout: page
+title: Video streaming using go2rtc on a Raspberry Pi
+---
 ## Install software
 
 Download and install the release labeled `go2rtc_linux_arm64` from [https://github.com/AlexxIT/go2rtc/releases](https://github.com/AlexxIT/go2rtc/releases). You can use these commands for the current release:
