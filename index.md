@@ -116,3 +116,5 @@ http://YOUR_IP_ADDRESS:1984/api/frame.jpeg?src=linux_usbcam
 {% endhighlight %}
 
 ***
+
+## Notes
