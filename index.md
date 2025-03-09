@@ -1,6 +1,6 @@
 ---
 layout: home
-site.title: Video streaming using go2rtc on a Raspberry Pi
+title: Video streaming using go2rtc on a Raspberry Pi
 ---
 
 ## Install software
