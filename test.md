@@ -35,3 +35,5 @@ ffmpeg:
 api:
   origin: "*"
 {% endhighlight %}
+
+<script src="/assets/scripts/copyCode.js" defer></script>
