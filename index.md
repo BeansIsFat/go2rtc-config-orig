@@ -7,7 +7,7 @@ title: Video streaming using go2rtc on a Raspberry Pi
 This guide should work on Raspberry Pi Zero 2 W, 3, and 4.  
 The Raspberry Pi 5 does not have a hardware video encoder so this configuration will not work as-is.[^pi5]
 
-[^pi5]: At a minimum you'd need to use a different `vcodec` for ffmpeg in `go2rtc.yaml`. I don't a Pi 5 to test it but it looks like you can remove replace `h264_v4l2m2m` with `libx264`. You should probably also remove `#hardware` from the end of the `linux_usbcam` line.
+[^pi5]: At a minimum you'd need to use a different `vcodec` for ffmpeg in `go2rtc.yaml`. I don't have a Pi 5 to test it but it looks like you can remove replace `h264_v4l2m2m` with `libx264`. You should probably also remove `#hardware` from the end of the `linux_usbcam` line.
 
 ## Install software
 
