@@ -4,6 +4,8 @@ title: Video streaming using go2rtc on a Raspberry Pi
 ---
 # Video streaming using go2rtc on a Raspberry Pi
 
+This guide should work on Raspberry Pi Zero 2 W, 3, and 4. The Raspberry Pi 5 does not have a hardware video encoder so this configuration will not work as-is. At a minimum you'd need to use a different `vcodec` for ffmpeg.
+
 ## Install software
 
 Download and install the release labeled `go2rtc_linux_arm64` from [https://github.com/AlexxIT/go2rtc/releases](https://github.com/AlexxIT/go2rtc/releases). You can use these commands for the current release:
@@ -21,8 +23,6 @@ There are several ways to do this but I prefer the builds and instructions avail
 ## Configure go2rtc
 
 Create the following two files. I have this configured for a Raspberry Pi Camera and a USB camera. You'll probably want to delete the `picam_h264` line unless you're using a Raspberry Pi Camera. Replace the path after `video=` with the path to your camera, which you should have from configuring Crowsnest.
-
-*Note*: remove `#hardware` if using a Rapsberry Pi 5
 
 File: `/home/pi/printer_data/config/go2rtc.yaml`
 
