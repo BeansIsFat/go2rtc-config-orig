@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 site.title: null
 title: Video streaming using go2rtc on a Raspberry Pi
 ---
