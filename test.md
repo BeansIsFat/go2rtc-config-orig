@@ -2,7 +2,6 @@ Just wanted to test the markdown features of kramdown.
 
 Here's a code block
 
-{% include codeHeader.html %}
 ```
 sudo rm -rf
 ```
@@ -23,7 +22,6 @@ api:
 
 And the same block with Rogue syntax highlighting
 
-{% include codeHeader.html %}
 {% highlight yaml %}
 streams:
   linux_usbcam: ffmpeg:device?video=/dev/v4l/by-id/usb-Ruision_UVC_Camera_20200623-video-index0&input_format=yuyv422&w=1280&h=720#video=h264#hardware
@@ -35,5 +33,3 @@ ffmpeg:
 api:
   origin: "*"
 {% endhighlight %}
-
-<script src="/assets/scripts/copyCode.js" defer></script>
