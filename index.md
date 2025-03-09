@@ -39,7 +39,7 @@ api:
 
 File: `/home/pi/printer_data/systemd/go2rtc.env`:  
 
-{% highlight yaml %}
+{% highlight conf %}
 GO2RTC_ARGS="-config /home/pi/printer_data/config/go2rtc.yaml"
 {% endhighlight %}
 
