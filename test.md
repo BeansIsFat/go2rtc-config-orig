@@ -23,6 +23,7 @@ api:
 
 And the same block with Rogue syntax highlighting
 
+{% include codeHeader.html %}
 {% highlight yaml %}
 streams:
   linux_usbcam: ffmpeg:device?video=/dev/v4l/by-id/usb-Ruision_UVC_Camera_20200623-video-index0&input_format=yuyv422&w=1280&h=720#video=h264#hardware
