@@ -3,9 +3,9 @@ Just wanted to test the markdown features of kramdown.
 Here's a code block
 
 {% include codeHeader.html %}
-~~~
+```
 sudo rm -rf
-~~~
+```
 
 And one with syntax highlighting
 
