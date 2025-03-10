@@ -68,7 +68,6 @@ WantedBy=multi-user.target
 Type=simple
 User=pi
 RemainAfterExit=Yes
-WorkingDirectory=/home/pi/go2rtc
 EnvironmentFile=/home/pi/printer_data/systemd/go2rtc.env
 ExecStart=/usr/local/bin/go2rtc $GO2RTC_ARGS
 Restart=on-failure
