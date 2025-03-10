@@ -6,4 +6,9 @@ gem "jekyll", "~> 4.2"
 
 group :jekyll_plugins do
   gem "jekyll-timeago", "~> 0.13.1"
+  gem 'jekyll-gfm-admonitions'
+  gem 'jekyll-optional-front-matter'
+  gem 'github-pages'
 end
+
+gem 'jekyll-remote-theme'
