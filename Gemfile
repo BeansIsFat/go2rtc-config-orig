@@ -1,11 +1,8 @@
-# Gemfile
-
 source 'https://rubygems.org'
-
-gem "jekyll", "~> 4.2"
+ 
+gem 'jekyll'
 
 group :jekyll_plugins do
-  gem "jekyll-timeago", "~> 0.13.1"
   gem 'jekyll-gfm-admonitions'
   gem 'jekyll-optional-front-matter'
   gem 'github-pages'
