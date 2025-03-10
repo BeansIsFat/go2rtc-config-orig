@@ -84,7 +84,7 @@ MemoryMax=250M
 
 You should end up with the following file structure:
 
-```
+{% highlight text %}
 /
 ├── etc
 │   └── systemd
@@ -97,7 +97,7 @@ You should end up with the following file structure:
             │   └── go2rtc.env
             └── config
                 └── go2rtc.yaml
-```
+{% endhighlight %}
 
 Now you can start go2rtc by running
 
