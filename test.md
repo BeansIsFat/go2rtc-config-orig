@@ -1,5 +1,13 @@
 Just wanted to test the markdown features of kramdown.
 
+And some custom plugins
+
+{% assign date = '2020-04-13T10:20:00Z' %}
+
+- Original date - {{ date }}
+- With timeago filter - {{ date | timeago }}
+
+
 Here's a code block
 
 ```
