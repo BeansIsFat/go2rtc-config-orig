@@ -25,9 +25,11 @@ There are several ways to do this but I prefer the builds and instructions avail
 
 ## Configure go2rtc
 
-Create the following two files. I have this configured for a Raspberry Pi Camera and a USB camera. You'll probably want to delete the `picam_h264` line unless you're using a Raspberry Pi Camera. Replace the path after `video=` with the path to your camera, which you should have from configuring Crowsnest.
+Create the following two files. Substitute your local user name (e.g. `pi`) for `[USER]` in both the file locations as well as in the `go2rtc.env` and `go2rtc.service` files.
 
-File: `/home/pi/printer_data/config/go2rtc.yaml`
+I have this configured for a Raspberry Pi Camera and a USB camera. You'll probably want to delete the `picam_h264` line unless you're using a Raspberry Pi Camera. Replace the path after `video=` with the path to your camera, which you should have from configuring Crowsnest.
+
+File: `/home/[USER]/printer_data/config/go2rtc.yaml`
 
 {% highlight yaml %}
 streams:
@@ -41,10 +43,10 @@ api:
   origin: "*"
 {% endhighlight %}
 
-File: `/home/pi/printer_data/systemd/go2rtc.env`:  
+File: `/home/[USER]/printer_data/systemd/go2rtc.env`:  
 
 {% highlight conf %}
-GO2RTC_ARGS="-config /home/pi/printer_data/config/go2rtc.yaml"
+GO2RTC_ARGS="-config /home/[USER]/printer_data/config/go2rtc.yaml"
 {% endhighlight %}
 
 ## Configure systemd service
@@ -68,7 +70,7 @@ WantedBy=multi-user.target
 Type=simple
 User=pi
 RemainAfterExit=Yes
-EnvironmentFile=/home/pi/printer_data/systemd/go2rtc.env
+EnvironmentFile=/home/[USER]/printer_data/systemd/go2rtc.env
 ExecStart=/usr/local/bin/go2rtc $GO2RTC_ARGS
 Restart=on-failure
 RestartSec=5
@@ -79,6 +81,23 @@ CPUWeight=20
 AllowedCPUs=1-2
 MemoryMax=250M
 {% endhighlight %}
+
+You should end up with the following file structure:
+
+```
+/
+├── etc
+│   └── systemd
+│       └── system
+│           └── go2rtc.service
+└── home
+    └── [USER]
+        └── printer_data
+            ├── systemd
+            │   └── go2rtc.env
+            └── config
+                └── go2rtc.yaml
+```
 
 Now you can start go2rtc by running
 
