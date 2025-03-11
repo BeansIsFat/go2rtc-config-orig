@@ -1,6 +1,6 @@
 Just wanted to test the markdown features of kramdown.
 
-{ highlight text, highlight_lines: [4, 9, 11] }
+{ highlight text mark_lines="4 9 11" }
 /
 ├── etc
 │   └── systemd
