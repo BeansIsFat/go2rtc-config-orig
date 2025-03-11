@@ -14,8 +14,9 @@ The Raspberry Pi 5 does not have a hardware video encoder so this configuration 
 Download and install the release labeled `go2rtc_linux_arm64` from [https://github.com/AlexxIT/go2rtc/releases](https://github.com/AlexxIT/go2rtc/releases). You can use these commands for the current release:
 
 {% highlight shell %}
-wget https://github.com/AlexxIT/go2rtc/releases/download/v1.9.8/go2rtc_linux_arm64
-sudo mv ./go2rtc_linux_arm64 /usr/local/bin/go2rtc
+if [[ $(uname -m) = aarch64 ]]; then ver=arm64; else ver=armv6; fi
+wget https://github.com/AlexxIT/go2rtc/releases/latest/download/go2rtc_linux_$ver
+sudo mv ./go2rtc_linux_$ver /usr/local/bin/go2rtc
 sudo chmod +x /usr/local/bin/go2rtc
 {% endhighlight %}
 
