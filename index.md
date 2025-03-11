@@ -4,14 +4,20 @@ title: Video streaming using go2rtc on a Raspberry Pi
 ---
 # Video streaming using go2rtc on a Raspberry Pi
 
-This guide should work on Raspberry Pi Zero 2 W, 3, and 4.  
-The Raspberry Pi 5 does not have a hardware video encoder so this configuration will not work as-is.[^pi5]
+This guide should work on the following hardware:  
+- Raspberry Pi Zero 2 W
+- Raspberry Pi 3
+- Raspberry Pi 4
+
+The Raspberry Pi 5 does not have a hardware video encoder so you would need to make some configuration changes.[^pi5]
 
 [^pi5]: At a minimum you'd need to use a different `vcodec` for ffmpeg in `go2rtc.yaml`. I don't have a Pi 5 to test it but it looks like you can remove replace `h264_v4l2m2m` with `libx264`. You should probably also remove `#hardware` from the end of the `linux_usbcam` line.
 
 ## Install software
 
-Download and install the release labeled `go2rtc_linux_arm64` from [https://github.com/AlexxIT/go2rtc/releases](https://github.com/AlexxIT/go2rtc/releases). You can use these commands for the current release:
+Use the following commands to download and install the latest go2rtc release for your version of Raspberry Pi OS.[^shell]
+
+[^shell]: This should work in `bash` and `zsh`. It will *not* work in `fish`, but if you're using that you likely understand enough of what's happening to modify the command on your own to make it work. Or you can launch `bash` then run the command as-is.
 
 {% highlight shell %}
 if [[ $(uname -m) = aarch64 ]]; then ver=arm64; else ver=armv6; fi
@@ -20,9 +26,8 @@ sudo mv ./go2rtc_linux_$ver /usr/local/bin/go2rtc
 sudo chmod +x /usr/local/bin/go2rtc
 {% endhighlight %}
 
-*Important note*: You may also need to update ffmpeg. Check your version by running `ffmpeg -version`. If it's not at least version 5.0 you'll need to update it. Older versions of Raspberry Pi OS have an outdated ffmpeg package so you may have to install it manually.
-
-There are several ways to do this but I prefer the builds and instructions available here: [https://johnvansickle.com/ffmpeg/](https://johnvansickle.com/ffmpeg/)
+*Important note*: The minimum ffmpeg version is 5.0 (check with `ffmpeg -version`). Older versions of Raspberry Pi OS have an outdated ffmpeg package so you may have to install it manually.  
+There are several ways to do this but I prefer the builds and instructions available here: [https://johnvansickle.com/ffmpeg](https://johnvansickle.com/ffmpeg)
 
 ## Configure go2rtc
 
