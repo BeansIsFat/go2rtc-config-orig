@@ -1,5 +1,11 @@
 Just wanted to test the markdown features of kramdown.
 
+{% highlight ruby mark_lines="1 2" %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 {% highlight text mark_lines="4 9 11" %}
 /
 ├── etc
