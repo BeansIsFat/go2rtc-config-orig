@@ -1,12 +1,19 @@
 Just wanted to test the markdown features of kramdown.
 
-And some custom plugins
-
-{% assign date = '2020-04-13T10:20:00Z' %}
-
-- Original date - {{ date }}
-- With timeago filter - {{ date | timeago }}
-
+{ highlight text, highlight_lines: [4, 9, 11] }
+/
+├── etc
+│   └── systemd
+│       └── system
+│           └── go2rtc.service
+└── home
+    └── [USER]
+        └── printer_data
+            ├── systemd
+            │   └── go2rtc.env
+            └── config
+                └── go2rtc.yaml
+{% endhighlight %}
 
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.
